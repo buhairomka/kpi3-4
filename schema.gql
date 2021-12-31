@@ -28,4 +28,5 @@ input StuffBody {
 
 type Mutation {
   createProduct(productInfo: StuffBody!): String!
+  deleteProduct(product_id: Float!): String!
 }

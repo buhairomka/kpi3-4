@@ -26,7 +26,7 @@ export class FirstSupplierService {
     );
   }
   async findProductsWhere(query) {
-          await this.sleep(4000)
+          await this.sleep(10000)
           console.log(query);
 
           if (Object.keys(query).length == 0) {

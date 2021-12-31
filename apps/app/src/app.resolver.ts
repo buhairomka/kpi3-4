@@ -92,5 +92,12 @@ export class EmployeeResolver {
     return id.rows[0]["id"];
   }
 
+  @Mutation(()=>String)
+  async deleteProduct(@Args("product_id") product_id: number) {
+    console.log(product_id);
+    const id = await this.db.query('delete from product where id = '+product_id+' returning id')
+    console.log(id.rows[0]);
+    return id.rows[0]["id"];
+  }
 }
 
