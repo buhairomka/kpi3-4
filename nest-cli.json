@@ -1,0 +1,30 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/crud-rest/src",
+  "monorepo": true,
+  "root": "apps/crud-rest",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/crud-rest/tsconfig.app.json"
+  },
+  "projects": {
+    "crud-rest": {
+      "type": "application",
+      "root": "apps/crud-rest",
+      "entryFile": "main",
+      "sourceRoot": "apps/crud-rest/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/crud-rest/tsconfig.app.json"
+      }
+    },
+    "app": {
+      "type": "application",
+      "root": "apps/app",
+      "entryFile": "main",
+      "sourceRoot": "apps/app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app/tsconfig.app.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Product {
+  id: Int!
+  category: String!
+  price: String!
+  color: String!
+  size: String!
+  discount: Int!
+  amount: Int!
+}
+
+type Query {
+  findProducts(input: StuffBody!): [[Product!]!]!
+}
+
+input StuffBody {
+  id: Int
+  category: String
+  price: String
+  color: String
+  size: String
+  discount: Int
+  amount: Int
+}
+
+type Mutation {
+  createProduct(productInfo: StuffBody!): String!
+}
